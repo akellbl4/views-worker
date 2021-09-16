@@ -28,17 +28,14 @@ async function handleRequest(request) {
 		.pop()
 
 	// Get views by slug
-	if (
-		typeof slug === 'string' &&
-		request.headers.get('Content-Type')?.startsWith('application/json')
-	) {
+	if (typeof slug === 'string' && request.headers.get('X-Requested-With') === 'fetch') {
 		const count = await getViewsBySlug(slug)
 
 		return new Response(count, { headers: { 'Content-Type': 'text/plain' } })
 	}
 
 	// Increment views counter
-	if (request.headers.get('Content-Type')?.startsWith('text/html') && typeof slug === 'string') {
+	if (typeof slug === 'string') {
 		await incrementCounter(slug)
 	}
 

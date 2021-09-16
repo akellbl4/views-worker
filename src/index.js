@@ -1,6 +1,7 @@
 import './lib/response'
 import { incrementCounter } from './lib/increment'
 import { getViewsMap, getViewsBySlug } from './lib/get-views'
+import { normalizeUrl } from './lib/normalize-url'
 
 addEventListener('fetch', event => {
 	event.respondWith(handleRequest(event.request))
@@ -22,7 +23,9 @@ async function handleRequest(request) {
 		return Response.json(map)
 	}
 
-	const slug = url.pathname.split('/').pop()
+	const slug = normalizeUrl(url.pathname)
+		.split('/')
+		.pop()
 
 	// Get views by slug
 	if (

@@ -1,21 +1,24 @@
 {
-  "private": true,
-  "name": "spotify-playback",
-  "version": "1.0.0",
-  "description": "Spotify API for your playback",
-  "main": "src/index.js",
-  "scripts": {
-    "dev": "wrangler dev",
-    "auth": "wrangler login",
-    "deploy": "wrangler publish --env production",
-    "format": "prettier --write '**/*.{js,css,json,md}'"
-  },
-  "author": "Pavel Mineev <pavel@mineev.me>",
-  "license": "MIT",
-  "devDependencies": {
-    "prettier": "^1.18.2",
-    "webpack": "^5.52.1",
-    "webpack-cli": "^4.8.0",
-    "wrangler": "^0.0.2"
-  }
+	"private": true,
+	"name": "views-worker",
+	"version": "1.0.0",
+	"description": "Views counter for any web-page",
+	"main": "src/index.js",
+	"scripts": {
+		"dev": "wrangler dev",
+		"auth": "wrangler login",
+		"deploy": "wrangler publish --env production",
+		"format": "prettier --write '**/*.{js,css,json,md}'"
+	},
+	"author": "Pavel Mineev <pavel@mineev.me>",
+	"license": "MIT",
+	"devDependencies": {
+		"esbuild-loader": "^2.15.1",
+		"eslint": "^7.32.0",
+		"eslint-config-prettier": "^8.3.0",
+		"prettier": "^1.18.2",
+		"webpack": "^5.52.1",
+		"webpack-cli": "^4.8.0",
+		"wrangler": "^0.0.2"
+	}
 }

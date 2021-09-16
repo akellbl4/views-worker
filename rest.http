@@ -1,11 +1,10 @@
-# auth
-GET http://localhost:8787/auth
+### increment a post views
+GET http://localhost:8787/post1
 
-# current state of blayback
-GET http://localhost:8787/now-playing
+### get a post views
+GET http://localhost:8787/post1
+Content-Type: application/json
 
-
-# top-10 tracks
-GET http://localhost:8787/top-tracks
-
+### get views list for all posts
+GET http://localhost:8787/?views
 

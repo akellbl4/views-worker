@@ -1,4 +1,4 @@
-name = "spotify-worker-dev"
+name = "views-worker-dev"
 type = "webpack"
 webpack_config = "webpack.config.js"
 
@@ -7,10 +7,16 @@ workers_dev = true
 route = ""
 zone_id = ""
 
+[[kv_namespaces]]
+binding = "views"
+id = ""
+preview_id = ""
+
 [vars]
 ENV = "development"
 
 [env.production]
-name = "spotify-worker"
+name = "views-worker"
 [env.production.vars]
 ENV = "production"
+
